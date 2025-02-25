@@ -12,8 +12,8 @@ repos:
       - id: check-symlinks
       - id: check-merge-conflict
       - id: mixed-line-ending
-      # - id: no-commit-to-branch
-      #   args: [--branch, staging, --pattern, ci.*, --branch, main]
+      - id: no-commit-to-branch
+        args: [--branch, staging, --pattern, ci.*, --branch, main]
       - id: check-added-large-files
         args: ['--maxkb=51200']
       - id: check-executables-have-shebangs
@@ -36,11 +36,6 @@ repos:
     rev: v0.19.1
     hooks:
       - id: gitlint
-  # - repo: https://github.com/commitizen-tools/commitizen
-  #   rev: v4.2.2
-  #   hooks:
-  #     # - id: commitizen
-  #     - id: commitizen-branch
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.23.3
     hooks:
